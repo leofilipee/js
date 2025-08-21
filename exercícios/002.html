@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        body{
+            background-color: #CFBF90;
+        }
+
+        div.container {
+            background-color: white;
+            display: block;
+            flex-direction: column;
+            width: 75%;
+            margin: 30px auto;
+            border-radius: 25px;
+            overflow: hidden;
+            justify-content: center;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.11);
+        }
+
+
+        div .time h1{
+            font-size: 1.5rem;
+            margin: 20px;
+            text-align: center;
+        }
+
+        div.img{
+            /* width: 50%;
+            border-radius: 50%;
+            position: relative;
+            left: 25%;
+            margin: 50px 0; */
+
+
+            width: 250px;
+            height: 250px;
+            background-color: aqua;
+            margin: 0 auto 50px auto;
+            border-radius: 50%;
+            background-image: url('https://preview.redd.it/33r8ripn59x51.jpg?auto=webp&s=1b5f616fbb198abb134222be490ea13f2b4e8a6a');
+            background-size: cover;
+        }
+
+        p, span{
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            margin-top: 30px;
+        }
+
+        a {
+            font-size: 1.5rem;
+            color: black;
+        }
+
+        a:hover {
+            color: rgb(99, 99, 99);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1>Que horas são?</h1>
+
+    <div class="container">
+
+        <div class="time"><h1>Agora são <span class="hora"> null</span> horas.</h1></div>
+        <div class="img">
+        </div>
+
+    </div>
+
+    <p>Direitos reservados a <a href="https://github.com/leofilipee">Leo Filipe</a></p>
+
+    <script>
+
+        let agora = new Date();
+        let heur = agora.getHours();
+
+        document.querySelector('div .time .hora').textContent = heur;
+
+    </script>
+    
+</body>
+</html>

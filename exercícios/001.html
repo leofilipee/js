@@ -28,10 +28,15 @@
             width: 48%;
             text-align: center;
             border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            background-color: #b03a3a;
         }
 
         .texto {
-            background-color: #f0f0f0;
+            background-color: #ffcaca;
             color: black;
             padding: 20px;
             text-align: center;
@@ -60,8 +65,24 @@
 
 
     <div class="texto">
-        <p>Box 3</p>
+        <p>Olá, mundo!</p>
     </div>
+
+    <script>
+
+        const b1 = document.querySelector('.box:nth-child(1)');
+        const b2 = document.querySelector('.box:nth-child(2)');
+        const b3 = document.querySelector('.texto');
+
+        b1.addEventListener('click', () => {
+            b3.textContent = 'Box 1 clicado!';
+        });
+
+        b2.addEventListener('click', () => {
+            b3.textContent = 'Box 2 clicado!';
+        });
+
+    </script>
 
 </body>
 
